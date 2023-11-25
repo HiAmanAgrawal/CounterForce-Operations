@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         startGame();
         countdown.style.display = "none";
       }
+    }, 1000); 
   }
 
   function startGame() {
