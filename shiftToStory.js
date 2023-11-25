@@ -1,11 +1,26 @@
 var button = document.getElementById("startButton");
-var button_sound = new Audio("./assets/button.mp3");
 var popup = document.getElementById("popup");
 var submitBtn = document.getElementById("submitBtn");
 var nameInput = document.getElementById("name");
 var nicknameInput = document.getElementById("nickname");
 var inputs = document.querySelectorAll("#popup input");
+var isMuted = true;
+var bgmusic = new Audio("./assets/Bg.mp3");
+var button_sound = new Audio("./assets/button.mp3");
 
+    function toggleMute() {
+        var muteImage = document.getElementById('muteImage');
+        localStorage.setItem("isMuted",isMuted);
+        if (isMuted) {
+            muteImage.src = './assets/mute.png';
+            bgmusic.loop = true;
+            bgmusic.play()
+        } else {
+            muteImage.src = './assets/unmute.png';
+            bgmusic.pause()
+        }
+            isMuted = !isMuted;
+        }
 
 button.onclick = function () {
     button_sound.play();

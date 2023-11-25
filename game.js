@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Initial cursor image
+  var clockSound = new Audio("./assets/key_stroke.mp3");
   var initialCursor = 'url("./assets/aim.png"), auto';
   var countdown = document.getElementById("countdown");
   // // Set a timer for 3 seconds before starting the game
@@ -16,6 +17,7 @@ function startCountdown() {
   var countdownInterval = setInterval(function () {
     countdown.innerText = count;
 
+    clockSound.play();
     // Decrement count
     count--;
 
@@ -284,6 +286,7 @@ function startCountdown() {
   // Background music
   var bgmusic = new Audio("./assets/Bg.mp3");
   bgmusic.loop = true;
+  bgmusic.volume= 0.3;
   bgmusic.currentTime = 38;
   bgmusic.play();
 });

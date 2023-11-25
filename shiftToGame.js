@@ -1,7 +1,7 @@
 var text = document.querySelectorAll("p");
 var missionDetails = document.getElementById("missionDetails");
 var button_sound = new Audio("./assets/button.mp3");
-var typewriter_audio = new Audio("./assets/typewriter_audio.mp3"); // Add typewriter audio
+var typewriter_audio = new Audio("./assets/typewriter_audio.mp3");
 
 var data = [
   'Mitchell, Phoenix Dawn has escalated the threat. We need you on this mission.',

@@ -38,7 +38,7 @@
 }
 #score{
     display: none;
-    background-color: rgba(255, 255, 255, 0.801);
+    background-color: rgba(255, 255, 255, 0.701);
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -50,11 +50,12 @@
     font-size: 1.5em;
     border-radius: 10px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .5fr 2fr 1fr;
+    grid-template-rows: .5fr 2fr 1fr .5fr;
     grid-template-areas: 
     "comment comment comment"
     "playerDetail playerDetail playerDetail"
-    "Button1 Button2 Button3";
+    "Button1 Button2 Button3"
+    "made made made";
 }
 #comment{
     grid-area: comment;
@@ -83,6 +84,10 @@
     /* cursor: pointer; */
 
 }
+#love{
+    grid-area: made;
+    text-align: center;
+}
 .button{
     display: flex;
     justify-content: center;
@@ -100,4 +105,35 @@
     margin: 4px;
     margin-left: 3vw;
     cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+    #comment{
+        font-size: 25px;
+    }
+    #playerDetail{
+        font-size: 15px;
+    }
+    .button{
+        font-size: 15px;
+    }
+}
+@media (max-height: 900px) and (max-width: 400px) {
+    .button{
+        font-size: 0.4em;
+    }
+    #score{
+        width: 85vw; 
+        height: 34vh;
+    }
+}
+@media (min-height: 901px) and (min-width:400px ) and (max-height: 1100px) and (max-width: 2000px) {
+    #comment{
+        font-size: 1.5em;
+    }
+    #score{
+        font-size: 3em;
+    }
+    .button{
+        font-size: 0.7em;
+    }
 }

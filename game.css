@@ -3,11 +3,11 @@
     margin: 0;
 }
 #countdown {
-    font-size: 2em;
+    font-size: 13em;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 9999;
+    top: 34%;
+    left: 46%;
+    z-index: 9;
     color: white;
   }
 
@@ -28,19 +28,16 @@ body {
     z-index: -1;
 }
 #gun {
+    background-image: url(./assets/Gun.png);
+    background-size: cover;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     transform: translateX(-50%);
-    width: 30vw;
-    margin: -5px;
+    width: 28.9vw;
+    height: 40vh;
+    margin: 0px;
 }
 
-#aim {
-    display: none;
-    position: relative;
-    left: 40%;
-    transform: translateX(-50%);
-}
 #scoreTab{
     display: flex;
     justify-content: space-evenly;
@@ -96,4 +93,24 @@ body {
 }
 .place img{
     width: 100%;
+}
+@media screen and (max-width: 900px) {
+    #place1{
+        top: 53vh;
+    }
+    #place2{
+        top: 52vh;
+    }
+    #place3{
+        top: 47vh;
+    }
+    #place4{
+        top: 54vh;
+    }
+    #place5{
+        top: 51.5vh;
+    }
+    #place6{
+        top: 53.5vh;
+    } 
 }
