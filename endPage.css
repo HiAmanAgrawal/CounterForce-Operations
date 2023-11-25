@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    animation: fadeIn 3s;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+#backgroundVideo{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+#overlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.677);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#missionPassed{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    animation: fadeIn 5s;
+}
+#score{
+    display: none;
+    background-color: rgba(255, 255, 255, 0.801);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    width: 50vw;
+    height: 80vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1.5em;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .5fr 2fr 1fr;
+    grid-template-areas: 
+    "comment comment comment"
+    "playerDetail playerDetail playerDetail"
+    "Button1 Button2 Button3";
+}
+#comment{
+    grid-area: comment;
+    text-align: center;
+    font-size: 44px;
+    margin-top: 20px;
+}
+#playerDetail{
+    grid-area: playerDetail;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+#restartButton{
+    grid-area: Button1;
+}
+#storyButton{
+    grid-area: Button2;
+}
+#about{
+    grid-area: Button3;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11vw;
+    height: auto;
+    padding: 3px;
+    border: 2px solid white;
+    background-color: black;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    position: absolute;
+    box-shadow: 5px 5px white;
+    margin: 4px;
+    margin-left: 3vw;
+}

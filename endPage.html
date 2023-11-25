@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CounterStrike Operations</title>
+    <link rel="stylesheet" href="endPage.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="./assets/background.mp4" type="video/mp4">
+    </video>
+    <div id="missionPassed">
+        <img src="./assets/mission_passed.png" alt="mission_passed">
+    </div>
+    <div id="overlay">
+        <div id="score">
+            <div id="comment">
+                <h1></h1>
+            </div>
+            <div id="playerDetail">
+                <p id="playerName"></p>
+                <p id="playerNickName"></p>
+                <p id="scoreValue"></p>
+                <p id="ammo"></p>
+                <p id="life"></p>
+                <p id="target"></p>
+            </div>
+            <div id="restartButton" class="button">
+                <p>RESTART Mission</p>
+            </div>
+            <div id="storyButton" class="button">
+                <p>RESTART GAME</p>
+            </div>
+            <div id="about" class="button">
+                <p>About Project</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="endPage.js"></script>
+</body>
+</html>

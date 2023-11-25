@@ -1,0 +1,91 @@
+* {
+    overflow: hidden;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    cursor: url("./assets/aim.png") , auto;
+    background-color: rgb(99, 67, 26);
+    background-repeat: no-repeat;
+    background-size: 135vh;
+    background-position-x: center;
+}
+#backgroundVideo{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+#gun {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30vw;
+    margin: -5px;
+}
+
+#aim {
+    display: none;
+    position: relative;
+    left: 40%;
+    transform: translateX(-50%);
+}
+#scoreTab{
+    display: flex;
+    justify-content: space-evenly;
+}
+#life, #ammo, #target {
+    background-image: linear-gradient(to right, transparent, white, white, white, white, transparent);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 10px;
+}
+#place1{
+    position: absolute;
+    width: 3vw;
+    height: 7vh;
+    top: 52vh;
+    left: 14vw;
+}
+#place2{
+    position: absolute;
+    width: 3vw;
+    height: 7vh;
+    top: 51vh;
+    left: 31vw;
+}
+#place3{
+    position: absolute;
+    width: 8vw;
+    height: 17.5vh;
+    top: 46vh;
+    left: 39vw;
+}
+#place4{
+    position: absolute;
+    width: 3vw;
+    height: 6.8vh;
+    top: 53vh;
+    left: 53vw;
+}
+#place5{
+    position: absolute;
+    width: 4vw;
+    height: 10vh;
+    top: 50.5vh;
+    left: 65vw;
+}
+#place6{
+    position: absolute;
+    width: 3vw;
+    height: 7vh;
+    top: 52.5vh;
+    left: 80vw;
+}
+.place img{
+    width: 100%;
+}
