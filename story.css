@@ -4,6 +4,7 @@
     margin: 0px;
     font-family: 'Courier New', Courier, monospace;
     animation: fadeIn 0.8s;
+    cursor: default;
 }
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -111,6 +112,7 @@ body{
     left: 40vw;
     top: 83vh;
     box-shadow: 5px 5px white;
+    cursor: pointer;
 }
 
 #skipButton:hover{
@@ -130,6 +132,8 @@ body{
     left: 22vw;
     top: 76vh;
     box-shadow: 5px 5px white;
+    cursor: pointer;
+
 }
 
 #startButton:hover{

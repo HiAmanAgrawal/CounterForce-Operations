@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    animation: fadeIn 3s;
+    animation: fadeIn 1s;
+    cursor: default;
 }
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -69,12 +70,18 @@
 }
 #restartButton{
     grid-area: Button1;
+    /* cursor: pointer; */
+
 }
 #storyButton{
     grid-area: Button2;
+    /* cursor: pointer; */
+
 }
 #about{
     grid-area: Button3;
+    /* cursor: pointer; */
+
 }
 .button{
     display: flex;
@@ -92,4 +99,5 @@
     box-shadow: 5px 5px white;
     margin: 4px;
     margin-left: 3vw;
+    cursor: pointer;
 }

@@ -14,6 +14,25 @@ var ammo = document.getElementById("ammo");
 var life = document.getElementById("life");
 var targetCount = document.getElementById("target");
 var comment = document.getElementById("comment");
+var reason = document.getElementById("reason");
+var reasonvalue = localStorage.getItem("gameOverReason");
+
+reason.innerText = reasonvalue;
+
+var restart = document.getElementById("restartButton");
+var story = document.getElementById("storyButton");
+var about = document.getElementById("about");
+var missionPassed = document.getElementById('missionPassed'); // Add this line
+
+restart.onclick = function(){
+    location.href="./game.html"
+}
+story.onclick = function(){
+    location.href="./story.html"
+}
+about.onclick = function(){
+    location.href="https://github.com/HiAmanAgrawal/CounterForce-Operations/blob/master/README.md";
+}
 
 var looseComment = [
     "Better luck next time!",
@@ -37,8 +56,10 @@ function getRandomComment(comments) {
 // Set the comment based on the game result
 if (gameOver === "true") {
     comment.innerText = getRandomComment(looseComment);
+    comment.style.color = "red";
 } else {
     comment.innerText = getRandomComment(winComment);
+    comment.style.color = "green";
 }
 
 function showScore() {
@@ -64,6 +85,10 @@ function displayScore() {
 }
 
 window.onload = function() {
+    if (gameOver === "true") {
+        missionPassed.innerHTML = '<img src="./assets/mission_failed.png" alt="mission_failed">';
+    } else {
+        missionPassed.innerHTML = '<img src="./assets/mission_passed.png" alt="mission_passed">';
+    }
     showScore();
 };
-

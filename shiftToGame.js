@@ -1,6 +1,7 @@
 var text = document.querySelectorAll("p");
 var missionDetails = document.getElementById("missionDetails");
 var button_sound = new Audio("./assets/button.mp3");
+var typewriter_audio = new Audio("./assets/typewriter_audio.mp3"); // Add typewriter audio
 
 var data = [
   'Mitchell, Phoenix Dawn has escalated the threat. We need you on this mission.',
@@ -29,19 +30,18 @@ var name_list = [
 var index = 0;
 var lineIndex = 0;
 
-// Create the typewriter sound outside the function
-var key_stroke = new Audio("./assets/key_stroke.mp3");
-
 function typewriter_style(i) {
   if (index < data[i].length) {
     let new_title = data[i].slice(0, index + 1);
-    text[i].innerHTML = name_list[i] + " " + new_title; 
+    text[i].innerHTML = name_list[i] + " " + new_title;
     index++;
+    typewriter_audio.play(); 
     setTimeout(function () {
       typewriter_style(i);
-      key_stroke.play();
     }, 10);
   } else {
+    typewriter_audio.pause(); 
+    typewriter_audio.currentTime = 0; 
     setTimeout(function () {
       index = 0;
       lineIndex++;
@@ -57,22 +57,25 @@ function typewriter_style(i) {
 typewriter_style(lineIndex);
 
 function appear() {
-  document.getElementById("skipButton").onclick = function(){
-  button_sound.play();
-  button_sound.onended = function() {
-    missionDetails.style.display = "block";
+  document.getElementById("skipButton").onclick = function () {
+    button_sound.play();
+    button_sound.onended = function () {
+      missionDetails.style.display = "block";
+    };
   };
-  }
 }
-appear()
 
-document.getElementById("startButton").onclick = function(){
+appear();
+
+document.getElementById("startButton").onclick = function () {
   button_sound.play();
-  button_sound.onended = function() {
+  button_sound.onended = function () {
     location.href = "./game.html";
   };
-}
+};
+
 var bgmusic = new Audio("./assets/Bg.mp3");
-bgmusic.currentTime=22;
-bgmusic.loop=true;
+bgmusic.currentTime = 22;
+bgmusic.volume=0.1;
+bgmusic.loop = true;
 bgmusic.play();
