@@ -8,29 +8,47 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 </head>
 <body>
+    <!-- Mute button -->
     <div id="muteButton" onclick="toggleMute()">
         <img src="./assets/unmute.png" alt="Mute" id="muteImage" width="40vw">
     </div>
+
+    <!-- Background video -->
     <video autoplay muted loop id="backgroundVideo">
         <source src="./assets/start2.mp4" type="video/mp4">
-      </video>
+    </video>
+
+    <!-- Popup for user information -->
     <div id="popup">
         <div id="blur"></div>
         <div id="popupContent">
+            <!-- Name input field -->
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Enter your name">
+
+            <!-- Nickname input field -->
             <label for="nickname">Nickname:</label>
             <input type="text" id="nickname" placeholder="Enter your nickname">
+
+            <!-- Submit button -->
             <button id="submitBtn">Submit</button>
-            <p id="rotate">Please rotate your device for best experience.</p>
+
+            <!-- Device rotation message -->
+            <p id="rotate">Please rotate your device for the best experience.</p>
         </div>
     </div>
+
+    <!-- Game name heading -->
     <div id="gameName">
         <h1>COUNTERFORCE OPERATIONS</h1>
     </div>
+
+    <!-- Start game button -->
     <div id="startButton">
         <p>START GAME</p>
     </div>
+
+    <!-- Script for shifting to the story -->
     <script src="shiftToStory.js"></script>
 </body>
 </html>

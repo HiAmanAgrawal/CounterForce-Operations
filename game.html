@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
-    <!-- <div class="sideCover" id="sideCoverLeft">
-        <img src="./assets/wood_wall1.png" alt="">
-    </div>
-    <div class="sideCover" id="sideCoverRight">
-        <img src="./assets/wood_wall2.png" alt="">
-    </div> -->
+    <!-- Div for Timer -->
     <div id="countdown">3</div>
+    <!-- Background Video -->
     <video autoplay muted loop id="backgroundVideo">
         <source src="./assets/background.mp4" type="video/mp4">
       </video>
+    <!-- Upper score tab -->
     <div id="scoreTab" >
         <div id="life">Life: 5 left</div>
         <div id="target">Target: 12</div>
         <div id="ammo">Ammoe Left: </div>
     </div>
+    <!-- Position of div from where terrorist is appearing -->
     <div id="position">
         <div class="place" id="place1"></div>
         <div class="place" id="place2"></div>
@@ -31,6 +29,7 @@
         <div class="place" id="place5"></div>
         <div class="place" id="place6"></div>
     </div>
+    <!-- Gun -->
     <div id="gun">
     </div>
     <script src="game.js"></script>

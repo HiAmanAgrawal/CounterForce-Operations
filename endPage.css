@@ -71,17 +71,14 @@
 }
 #restartButton{
     grid-area: Button1;
-    /* cursor: pointer; */
 
 }
 #storyButton{
     grid-area: Button2;
-    /* cursor: pointer; */
 
 }
 #about{
     grid-area: Button3;
-    /* cursor: pointer; */
 
 }
 #love{

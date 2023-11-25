@@ -1,41 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Initial cursor image
   var clockSound = new Audio("./assets/key_stroke.mp3");
   var initialCursor = 'url("./assets/aim.png"), auto';
   var countdown = document.getElementById("countdown");
-  // // Set a timer for 3 seconds before starting the game
-  // setTimeout(function () {
-  //   startGame();
-  // }, 3000);
-// Start the countdown
-startCountdown();
+  startCountdown();
 
-function startCountdown() {
-  var count = 3;
+  function startCountdown() {
+    var count = 3;
 
-  // Update the countdown every second
-  var countdownInterval = setInterval(function () {
-    countdown.innerText = count;
+    // Update the countdown every second
+    var countdownInterval = setInterval(function () {
+      countdown.innerText = count;
 
-    clockSound.play();
-    // Decrement count
-    count--;
+      clockSound.play();
+      // Decrement count
+      count--;
 
-    // If the countdown reaches 0, start the game and hide the countdown
-    if (count < 0) {
-      clearInterval(countdownInterval); // Stop the countdown
-      startGame();
-      countdown.style.display = "none";
-    }
-  }, 1000); // 1000 milliseconds = 1 second
-}
+      // If the countdown reaches 0, start the game and hide the countdown
+      if (count < 0) {
+        clearInterval(countdownInterval); 
+        startGame();
+        countdown.style.display = "none";
+      }
+  }
 
   function startGame() {
     document.body.addEventListener("click", function () {
       // Change the cursor to a different image
       document.body.style.cursor = 'url("./assets/fire.png"), auto';
 
-      // Set a timeout to revert to the initial cursor after half a second (500 milliseconds)
+      // Set a timeout to revert to the initial cursor after half a second 
       setTimeout(function () {
         document.body.style.cursor = initialCursor;
       }, 200);
@@ -90,7 +83,8 @@ function startCountdown() {
     // Function to decrease ammo
     document.onclick = function () {
       ammoCount--;
-      document.getElementById("ammo").innerText = "Ammo: " + ammoCount + " left";
+      document.getElementById("ammo").innerText =
+        "Ammo: " + ammoCount + " left";
       fire_sound.play();
     };
 
@@ -136,7 +130,8 @@ function startCountdown() {
       currTerroristplace.appendChild(terrorist);
       fire_sound.play();
       lifeCount--;
-      document.getElementById("life").innerText = "Life: " + lifeCount + " left";
+      document.getElementById("life").innerText =
+        "Life: " + lifeCount + " left";
       if (lifeCount <= 0) {
         document.getElementById("target").innerText = "GAME OVER: Out of Life!";
         gameOver = true;
@@ -178,7 +173,10 @@ function startCountdown() {
         localStorage.setItem("ammoCount", ammoCount);
         localStorage.setItem("gameOver", gameOver);
         localStorage.setItem("score", score);
-        localStorage.setItem("gameOverReason", "GAME OVER: You killed Jake Brother");
+        localStorage.setItem(
+          "gameOverReason",
+          "GAME OVER: You killed Jake Brother"
+        );
         location.href = "./endPage.html";
         clearInterval(brotherIntervalId);
         clearInterval(terroristIntervalId);
@@ -205,7 +203,8 @@ function startCountdown() {
           localStorage.setItem("gameOverReason", "You WON!");
           location.href = "./endPage.html";
         } else if (lifeCount <= 0) {
-          document.getElementById("target").innerText = "GAME OVER: Out of Life!";
+          document.getElementById("target").innerText =
+            "GAME OVER: Out of Life!";
           gameOver = true;
           localStorage.setItem("lifeCount", lifeCount);
           localStorage.setItem("targetCount", targetCount);
@@ -215,7 +214,8 @@ function startCountdown() {
           localStorage.setItem("gameOverReason", "GAME OVER: Out of Life!");
           location.href = "./endPage.html";
         } else {
-          document.getElementById("target").innerText = "GAME OVER: Out of Ammo!";
+          document.getElementById("target").innerText =
+            "GAME OVER: Out of Ammo!";
           gameOver = true;
           localStorage.setItem("lifeCount", lifeCount);
           localStorage.setItem("targetCount", targetCount);
@@ -267,7 +267,8 @@ function startCountdown() {
 
         // Check for game over due to ammo depletion
         if (ammoCount <= 0) {
-          document.getElementById("target").innerText = "GAME OVER: Out of Ammo!";
+          document.getElementById("target").innerText =
+            "GAME OVER: Out of Ammo!";
           gameOver = true;
           localStorage.setItem("lifeCount", lifeCount);
           localStorage.setItem("targetCount", targetCount);
@@ -286,7 +287,7 @@ function startCountdown() {
   // Background music
   var bgmusic = new Audio("./assets/Bg.mp3");
   bgmusic.loop = true;
-  bgmusic.volume= 0.3;
+  bgmusic.volume = 0.3;
   bgmusic.currentTime = 38;
   bgmusic.play();
 });

@@ -8,17 +8,22 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 </head>
 <body>
+    <!-- Background Video -->
     <video autoplay muted loop id="backgroundVideo">
         <source src="./assets/background.mp4" type="video/mp4">
     </video>
+    <!-- Image of either mission passed or mission failed based on score. -->
     <div id="missionPassed">
         <img src="./assets/mission_passed.png" alt="mission_passed">
     </div>
+    <!-- A translucent black background -->
     <div id="overlay">
         <div id="score">
+            <!-- Upper Comments i.e speed up boy -->
             <div id="comment">
                 <h1></h1>
             </div>
+            <!-- Details of the player by using java storage -->
             <div id="playerDetail">
                 <p id="playerName"></p>
                 <p id="playerNickName"></p>
@@ -28,15 +33,19 @@
                 <p id="target"></p>
                 <p id="reason"></p>
             </div>
+            <!-- Button for Restarting the mission -->
             <div id="restartButton" class="button">
                 <p>RESTART</br>Mission</p>
             </div>
+            <!-- Button for Restarting the game -->
             <div id="storyButton" class="button">
                 <p>RESTART</br>GAME</p>
             </div>
+            <!-- Button for redirecting to github readme -->
             <div id="about" class="button">
                 <p>About</br>Project</p>
             </div>
+            <!-- Made with love by Aman Agrawal -->
             <div id="love">Made with &#128150; by Aman Agrawal</div>
         </div>
     </div>
