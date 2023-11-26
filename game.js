@@ -203,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.setItem("score", score);
           localStorage.setItem("gameOverReason", "You WON!");
           location.href = "./endPage.html";
+          return;
         } else if (lifeCount <= 0) {
           document.getElementById("target").innerText =
             "GAME OVER: Out of Life!";
